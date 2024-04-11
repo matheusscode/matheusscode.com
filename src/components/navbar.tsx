@@ -7,7 +7,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 
 const NavBar = () => {
     return (
-        <header className='sticky top-0 hidden max-[1000px]:flex items-center justify-between bg-zinc-50 border-b border-solid border-gray-200 p-3'>
+        <header className='sticky z-50 top-0 hidden max-[1000px]:flex items-center justify-between bg-zinc-50 border-b border-solid border-gray-200 p-3'>
             <Drawer>
                 <DrawerTrigger asChild>
                     <Button variant="ghost" size="icon" title="Toggle drawer">
