@@ -6,11 +6,9 @@ import { Separator } from "./ui/separator"
 import { PAGE_LINKS, SOCIAL_LINKS } from "@/constants/rounting"
 import RenderLinks from "./render-links"
 
-
-
 const SideBar = () => {
     return (
-        <aside className="max-w-[314px] h-screen max-[1000px]:hidden flex flex-col gap-4 sticky top-0 w-full bg-zinc-50 border-r border-solid border-gray-200 p-3">
+        <aside className="max-w-[317px] w-full h-screen max-[1000px]:hidden flex flex-col gap-4 sticky top-0 bg-zinc-50 border-r border-solid border-gray-200 p-3">
             <Link href="/" className="link-card inline-flex items-center gap-2 p-2 hover:bg-gray-200 rounded-md">
                 <Avatar >
                     <AvatarImage src="https://avatars.githubusercontent.com/u/99546472?v=4" alt="devmatolo" />
