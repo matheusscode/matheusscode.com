@@ -10,11 +10,11 @@ const SectionContainer: FC<SectionContainerProps> = ({
 }) => {
   return (
     <section
+      {...props}
       className={cn(
-        "flex flex-col h-full max-w-5xl w-full mx-auto pt-24 px-8 pb-16",
+        "flex flex-col h-full max-w-5xl w-full mx-auto pt-24 max-[1000px]:px-4 px-8 pb-16",
         className
       )}
-      {...props}
     >
       {children}
     </section>

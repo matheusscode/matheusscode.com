@@ -14,7 +14,7 @@ export default function Page() {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
             <div
               key={`data_${item}`}
-              className="sticky top-10 flex flex-col items-baseline gap-6 md:flex-row md:gap-12"
+              className="sticky top-10 bg-white max-[1000px]:top-20 flex flex-col items-baseline gap-6 md:flex-row md:gap-12"
             >
               <div className="flex items-center">
                 <h2 className="text-xl font-bold">2023</h2>
