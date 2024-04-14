@@ -1,19 +1,21 @@
-'use client'
+"use client";
 
 import NavigationLink from "@/components/navigation-link";
 import { CustomLinkProps } from "@/types";
-import { usePathname } from "next/navigation"
+import { usePathname } from "next/navigation";
 import { FC } from "react";
-
 
 interface RenderLinksProps {
   data: CustomLinkProps[];
   title?: string;
   hasCount?: boolean;
 }
-const RenderLinks: FC<RenderLinksProps> = ({ data, hasCount = false, title }) => {
-
-  const pathname = usePathname()
+const RenderLinks: FC<RenderLinksProps> = ({
+  data,
+  hasCount = false,
+  title,
+}) => {
+  const pathname = usePathname();
 
   return (
     <nav className="flex flex-col gap-1">
@@ -36,4 +38,4 @@ const RenderLinks: FC<RenderLinksProps> = ({ data, hasCount = false, title }) =>
   );
 };
 
-export default RenderLinks
+export default RenderLinks;
