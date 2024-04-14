@@ -1,5 +1,5 @@
-import SectionContainer from "@/components/container/section-container";
-import SectionWrapper from "@/components/container/section-wrapper";
+import SectionContainer from "@/components/helpers/section-container";
+import SectionWrapper from "@/components/helpers/section-wrapper";
 import Title from "@/components/title";
 import {
   Table,
@@ -10,6 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { jobs } from "@/constants/jobs";
 import Link from "next/link";
 
 export default function Page() {
@@ -67,9 +68,22 @@ export default function Page() {
               </TableRow>
             </TableHeader>
             <TableBody className="p-2 overflow-x-scroll">
-              <TableRow>
-                <TableCell className="px-4 py-3 font-medium">asdasd</TableCell>
-              </TableRow>
+              {jobs.map((job) => (
+                <TableRow key={job.id}>
+                  <TableCell className="px-4 py-3 font-medium">
+                    {job.company}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 font-medium">
+                    {job.office}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 font-medium">
+                    {job.beginning_and_end}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 font-medium">
+                    {job.route}
+                  </TableCell>
+                </TableRow>
+              ))}
             </TableBody>
             <TableCaption className="py-3">
               I worked on them all with all the affection and gratitude in the

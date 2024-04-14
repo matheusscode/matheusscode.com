@@ -1,5 +1,5 @@
-import SectionContainer from "@/components/container/section-container";
-import SectionWrapper from "@/components/container/section-wrapper";
+import SectionContainer from "@/components/helpers/section-container";
+import SectionWrapper from "@/components/helpers/section-wrapper";
 import JourneyCard from "@/components/journey-card";
 import Title from "@/components/title";
 import { PlusIcon } from "lucide-react";

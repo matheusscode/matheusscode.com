@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import SideBar from "@/components/sidebar";
 import NavBar from "@/components/navbar";
-import { JetBrains_Mono } from 'next/font/google'
-import { GeistSans } from 'geist/font/sans'
+import { JetBrains_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import DisclosureProvider from "@/context/disclosure-provider";
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
-  weight: ['400']
-})
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,16 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${GeistSans.variable}`} suppressHydrationWarning>
-      <body className="flex w-full">
-        <SideBar />
-        <div className="w-full h-full">
-          <NavBar />
-          <main>
-            {children}
-          </main>
-        </div>
-      </body>
+    <html
+      lang="en"
+      className={`${jetbrainsMono.variable} ${GeistSans.variable}`}
+      suppressHydrationWarning
+    >
+      <DisclosureProvider>
+        <body className="flex w-full">
+          <SideBar />
+          <div className="w-full h-full">
+            <NavBar />
+            <main>{children}</main>
+          </div>
+        </body>
+      </DisclosureProvider>
     </html>
   );
 }
