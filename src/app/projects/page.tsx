@@ -1,6 +1,6 @@
 import SectionContainer from "@/components/helpers/section-container";
 import SectionWrapper from "@/components/helpers/section-wrapper";
-import ProjectCard from "@/components/project-card";
+// import ProjectCard from "@/components/project-card";
 import Title from "@/components/title";
 
 export default function Page() {
@@ -9,7 +9,9 @@ export default function Page() {
       <SectionContainer>
         <SectionWrapper>
           <Title>Projects</Title>
-          <div className="grid max-[600px]:grid-cols-1 max-[800px]:grid-cols-2 grid-cols-3 gap-2 mt-8 ">
+
+          <p className="mt-6 text-xl font-normal">Coming soon...</p>
+          {/* <div className="grid max-[600px]:grid-cols-1 max-[800px]:grid-cols-2 grid-cols-3 gap-2 mt-8 ">
             <ProjectCard
               className="max-[800px]:col-span-1 col-span-2"
               href="/"
@@ -30,7 +32,7 @@ export default function Page() {
               className="max-[800px]:col-span-1 col-span-2"
               href="/"
             />
-          </div>
+          </div> */}
         </SectionWrapper>
       </SectionContainer>
     </div>

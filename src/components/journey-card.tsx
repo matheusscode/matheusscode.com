@@ -1,37 +1,40 @@
-import { FC } from 'react'
+import { FC } from "react";
 
+export type JourneyDataProps = {
+  title?: string;
+  description?: string;
+  image?: {
+    url: string;
+    title: string;
+    description: string;
+    width: string | number;
+    height: string | number;
+  };
+  index?: number;
+};
 
-type JourneyCardProps = {
-    title?: string
-    description?: string
-    image?: {
-        url: string
-        title: string
-        description: string
-        width: string | number
-        height: string | number
-    }
-    index?: number
-}
+export type JourneyCardProps = {
+  content: JourneyDataProps;
+};
 
-const JourneyCard: FC<JourneyCardProps> = ({ title, image, index }) => {
-    return (
-        <div className="word-break-word flex flex-col h-[400px]">
-            <span className="font-semibold tracking-tight">{title}</span>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi illo voluptate neque, odit enim, labore a perspiciatis eum expedita itaque quod pariatur nesciunt perferendis impedit?</p>
-            {image?.url && (
-                <div className="mt-2.5 overflow-hidden rounded-xl bg-white">
-                    <img
-                        src={image.url}
-                        alt={image.title || image.description}
-                        width={image.width}
-                        height={image.height}
-                        className="animate-reveal"
-                    />
-                </div>
-            )}
+const JourneyCard: FC<JourneyCardProps> = ({ content }) => {
+  return (
+    <div className="word-break-word flex flex-col gap-2 h-auto pb-14">
+      <h1 className="font-semibold tracking-tight text-xl">{content.title}</h1>
+      <p>{content.description}</p>
+      {content.image?.url && (
+        <div className="mt-2.5 overflow-hidden rounded-xl bg-white">
+          <img
+            src={content.image.url}
+            alt={content.image.title}
+            width={content.image.width}
+            height={content.image.height}
+            className="animate-reveal"
+          />
         </div>
-    )
-}
+      )}
+    </div>
+  );
+};
 
-export default JourneyCard
+export default JourneyCard;

@@ -11,10 +11,7 @@ const SectionWrapper: FC<SectionWrapperProps> = ({
   return (
     <div
       {...props}
-      className={cn(
-        "py-4 px-12 max-[1000px]:px-4 bg-yellow w-full h-full",
-        className
-      )}
+      className={cn("py-4 px-12 max-[1000px]:px-4 w-full h-full", className)}
     >
       {children}
     </div>

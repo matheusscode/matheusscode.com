@@ -1,6 +1,6 @@
 import {
   CustomLinkProps,
-  NavigationLinkProps,
+  // NavigationLinkProps,
 } from "@/types/navigation-link-props";
 import {
   ArmchairIcon,
@@ -10,7 +10,7 @@ import {
   InstagramIcon,
   LinkedinIcon,
   NavigationIcon,
-  PencilLineIcon,
+  // PencilLineIcon,
   SparklesIcon,
   SquareKanbanIcon,
   TwitterIcon,
