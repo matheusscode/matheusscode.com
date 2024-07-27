@@ -27,7 +27,7 @@ const BlogContainer: FC<BlogContainerProps> = ({
   return (
     <div {...props} className="relative w-full h-full">
       <IconButton
-        className="hidden max-[800px]:block"
+        className="hidden max-[800px]:block p-4 fixed bottom-4 right-4"
         onClick={handleExpansionPostList}
         icon={<Icon />}
       />

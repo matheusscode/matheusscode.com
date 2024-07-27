@@ -20,38 +20,11 @@ export default function Page() {
         <Title>About me.</Title>
         <div className="flex flex-col gap-6 font-normal text-lg">
           <h1>
-            Olá 👋, Eu me chamo Matheus{" "}
-            {'(que significa "Dádiva de Deus" em português)'}, Engenheiro de
-            Software, músico, professor, minimalista e CEO da Signalize at
-            Genius Fundation, que mora na cidade de Manaus - Amazonas, Brasil.
+            Hello 👋, my name is Matheus{" "}
+            {"(What does God's Gift mean in Portuguese?)"}, Engineer Software,
+            musician, teacher, minimalist and CEO of Signalize in Genius
+            Foundation, which lives in the city of Manaus - Amazonas, Brazil.
           </h1>
-          <h2>
-            Eu desenvolvo coisas como Engenheiro de Software Frontend Júnior na{" "}
-            <Link
-              target="_blank"
-              href="https://ream.com.br/"
-              className="transition-all hover:text-red-500 underline"
-            >
-              Ream
-            </Link>
-            . Anteriormente, trabalhei como Engenheiro de Software Fullstack
-            Júnior no{" "}
-            <Link
-              target="_blank"
-              href="https://ham.org.br/"
-              className="transition-all hover:text-emerald-500 underline"
-            >
-              Hospital Adventista de Manaus e Engenheiro de Manaus
-            </Link>{" "}
-            Software Frontend na{" "}
-            <Link
-              target="_blank"
-              href="https://www.trixxtem.com.br/"
-              className="transition-all hover:text-purple-500 underline"
-            >
-              Trixx Tecnologia
-            </Link>
-          </h2>
         </div>
 
         <div className="flex flex-col gap-4 mt-8 w-full">
@@ -67,7 +40,7 @@ export default function Page() {
                 <TableHead className="w-[70px] px-4 text-right"></TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody className="p-2 overflow-x-scroll">
+            <TableBody className="p-2 whitespace-nowrap overflow-x-scroll">
               {jobs.map((job) => (
                 <TableRow key={job.id}>
                   <TableCell className="px-4 py-3 font-medium">
@@ -80,7 +53,9 @@ export default function Page() {
                     {job.beginning_and_end}
                   </TableCell>
                   <TableCell className="px-4 py-3 font-medium">
-                    {job.route}
+                    <Link className="text-blue-500 underline " href={job.route}>
+                      {job.route}
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))}

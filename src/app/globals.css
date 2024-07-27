@@ -7,6 +7,22 @@
   color: white;
 }
 
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #fafafa;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0a0a0a;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #262626;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
